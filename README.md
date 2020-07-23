@@ -1,0 +1,22 @@
+# Coin Pickup
+_demo of coin-pickup scene running in preview._
+
+![demo](https://github.com/decentraland-scenes/coin-pickup/blob/master/screenshots/coin-pickup.gif)
+
+
+## Description
+Example of coin pickup game mechanic. You can view the scene [here](https://coin-pickup.vercel.app/).
+
+## Running the scene
+After you clone the project, run the following:
+
+```
+npm install
+```
+
+Followed by:
+
+```
+dcl start
+```
+
