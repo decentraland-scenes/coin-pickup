@@ -20,6 +20,5 @@ Followed by:
 dcl start
 ```
 ## Acknowledgements
-After you clone the project, run the following:
 
 - _coinPickup.mp3_ modified from https://freesound.org/people/MATRIXXX_/sounds/402766/ 
