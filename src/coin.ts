@@ -22,15 +22,12 @@ export class Coin extends Entity {
     this.addComponent(
       new utils.TriggerComponent(
         trigger,
-        0,
-        0,
-        null,
-        null,
-        () => {
+        0, 0, null, null, // Default trigger params
+        () => { // Camera enter
           this.getComponent(Transform).scale.setAll(0)
           coinPickupSound.getComponent(AudioSource).playOnce()
         },
-        () => {
+        () => { // Camera exit
           engine.removeEntity(this)
         }
       )
