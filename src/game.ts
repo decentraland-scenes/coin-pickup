@@ -4,7 +4,6 @@ import { Coin } from "./coin"
 // Adding base scene models
 const base = new Entity()
 base.addComponent(new GLTFShape("models/baseLight.glb"))
-base.addComponent(new Transform())
 engine.addEntity(base)
 
 const platform = new Entity()
