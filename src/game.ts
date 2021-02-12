@@ -1,17 +1,17 @@
-import utils from "../node_modules/decentraland-ecs-utils/index"
-import { Coin } from "./coin"
+import * as utils from '@dcl/ecs-scene-utils'
+import { Coin } from './coin'
 
 // Adding base scene models
 const base = new Entity()
-base.addComponent(new GLTFShape("models/baseLight.glb"))
+base.addComponent(new GLTFShape('models/baseLight.glb'))
 engine.addEntity(base)
 
 const platform = new Entity()
-platform.addComponent(new GLTFShape("models/platform.glb"))
+platform.addComponent(new GLTFShape('models/platform.glb'))
 platform.addComponent(new Transform())
 engine.addEntity(platform)
 
-const coinShape = new GLTFShape("models/coin.glb") // Includes the spinning animation
+const coinShape = new GLTFShape('models/coin.glb') // Includes the spinning animation
 
 // Contains the positions for each coin
 const coinPositions = [
@@ -34,9 +34,16 @@ const coinPositions = [
   new Vector3(13.8, 3.9, 13.8),
 ]
 
-let triggerBoxShape = new utils.TriggerBoxShape(new Vector3(1.5, 3, 1.5), new Vector3(0, 1, 0)) // Trigger shape for coin
+let triggerBoxShape = new utils.TriggerBoxShape(
+  new Vector3(1.5, 3, 1.5),
+  new Vector3(0, 1, 0)
+) // Trigger shape for coin
 
 // Setup the coins
 for (let coinPosition of coinPositions) {
-  const coin = new Coin(coinShape, new Transform({ position: coinPosition }), triggerBoxShape)
+  const coin = new Coin(
+    coinShape,
+    new Transform({ position: coinPosition }),
+    triggerBoxShape
+  )
 }
