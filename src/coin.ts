@@ -9,6 +9,7 @@ coinPickupSound.addComponent(new Transform())
 coinPickupSound.addComponent(
   new AudioSource(new AudioClip('sounds/coinPickup.mp3'))
 )
+engine.addEntity(coinPickupSound)
 coinPickupSound.setParent(Attachable.AVATAR)
 
 export class Coin extends Entity {
