@@ -10,22 +10,11 @@
   "owner": "",
   "scene": {
     "parcels": [
-      "0,0"
+      "-133,-42"
     ],
-    "base": "0,0"
-  },
-  "communications": {
-    "type": "webrtc",
-    "signalling": "https://signalling-01.decentraland.org"
-  },
-  "policy": {
-    "contentRating": "E",
-    "fly": true,
-    "voiceEnabled": true,
-    "blacklist": []
+    "base": "-133,-42"
   },
   "main": "bin/game.js",
-  "tags": [],
   "spawnPoints": [
     {
       "name": "spawn1",
