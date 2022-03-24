@@ -34,7 +34,7 @@ export class Coin extends Entity {
         onCameraExit: () => {
           // Camera exit
           engine.removeEntity(this)
-        },
+        }
       })
     )
   }

@@ -31,16 +31,16 @@ const coinPositions = [
   new Vector3(5.2, 3.9, 13.8),
   new Vector3(8, 3.9, 13.8),
   new Vector3(10.8, 3.9, 13.8),
-  new Vector3(13.8, 3.9, 13.8),
+  new Vector3(13.8, 3.9, 13.8)
 ]
 
-let triggerBoxShape = new utils.TriggerBoxShape(
+const triggerBoxShape = new utils.TriggerBoxShape(
   new Vector3(1.5, 3, 1.5),
   new Vector3(0, 1, 0)
 ) // Trigger shape for coin
 
 // Setup the coins
-for (let coinPosition of coinPositions) {
+for (const coinPosition of coinPositions) {
   const coin = new Coin(
     coinShape,
     new Transform({ position: coinPosition }),
