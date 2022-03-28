@@ -1,5 +1,5 @@
 import * as utils from '@dcl/ecs-scene-utils'
-import { Coin } from './coin'
+import { createCoin } from './coin'
 
 // Adding base scene models
 const base = new Entity()
@@ -31,7 +31,7 @@ const coinPositions = [
   new Vector3(5.2, 3.9, 13.8),
   new Vector3(8, 3.9, 13.8),
   new Vector3(10.8, 3.9, 13.8),
-  new Vector3(13.8, 3.9, 13.8)
+  new Vector3(13.8, 3.9, 13.8),
 ]
 
 const triggerBoxShape = new utils.TriggerBoxShape(
@@ -41,7 +41,7 @@ const triggerBoxShape = new utils.TriggerBoxShape(
 
 // Setup the coins
 for (const coinPosition of coinPositions) {
-  const coin = new Coin(
+  createCoin(
     coinShape,
     new Transform({ position: coinPosition }),
     triggerBoxShape
